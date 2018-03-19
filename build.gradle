@@ -58,6 +58,9 @@ dependencies {
     testRuntime "org.seleniumhq.selenium:selenium-chrome-driver:2.47.1"
     testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
     testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
+
+    // use a newer fields plug-in than the one that comes with Grails 3.3.3
+    compile 'org.grails.plugins:fields:2.2.7'
 }
 
 bootRun {
