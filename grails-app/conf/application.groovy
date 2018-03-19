@@ -1,0 +1,1 @@
+grails.plugin.fields.disableLookupCache = true
