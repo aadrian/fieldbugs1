@@ -18,7 +18,8 @@
             <g:if test="\${flash.message}">
                 <div class="message" role="status">\${flash.message}</div>
             </g:if>
-            <f:table collection="\${${propertyName}List}" />
+            <f:table collection="\${${propertyName}List}"
+                maxProperties="0" except="[]"/>
 
             <div class="pagination">
                 <g:paginate total="\${${propertyName}Count ?: 0}" />

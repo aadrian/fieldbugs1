@@ -19,7 +19,8 @@
             <g:if test="\${flash.message}">
             <div class="message" role="status">\${flash.message}</div>
             </g:if>
-            <f:display bean="${propertyName}" />
+            <f:display bean="${propertyName}"
+                       maxProperties="0" except="[]"/>
             <g:form resource="\${this.${propertyName}}" method="DELETE">
                 <fieldset class="buttons">
                     <g:link class="edit" action="edit" resource="\${this.${propertyName}}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
