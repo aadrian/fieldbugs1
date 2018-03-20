@@ -10,7 +10,7 @@ class ${className}Controller {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
+        params.max = Math.min(max ?: 3, 100)
         respond ${propertyName}Service.list(params), model:[${propertyName}Count: ${propertyName}Service.count()]
     }
 
