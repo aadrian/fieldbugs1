@@ -43,25 +43,24 @@
         </li>
     </content>
 
-    <div class="svg" role="presentation">
-        <div class="grails-logo-container">
-            <asset:image src="grails-cupsonly-logo-white.svg" class="grails-logo"/>
-        </div>
-    </div>
-
     <div id="content" role="main">
         <section class="row colset-2-its">
-            <h1>Welcome to Grails</h1>
+            <h1>Simplistic Grails Demo</h1>
 
             <p>
-                Congratulations, you have successfully started your first Grails application! At the moment
-                this is the default page, feel free to modify it to either redirect to a controller or display
-                whatever content you may choose. Below is a list of controllers that are currently deployed in
-                this application, click on each to execute its default action:
+                Simplistic demo to illustrate various Grails (and Fields Plug-in) bugs/issues.
             </p>
 
             <div id="controllers" role="navigation">
                 <h2>Available Controllers:</h2>
+                <ul>
+                    <li><a href="${createLink(controller: 'tableOne')}"      target="_blank"> ${message(code: 'tableOne.label',   default: 'One')}</a></li>
+                    <li><a href="${createLink(controller: 'tableTwo')}"      target="_blank"> ${message(code: 'tableTwo.label',   default: 'Two')}</a></li>
+                    <li><a href="${createLink(controller: 'tableTree')}"     target="_blank"> ${message(code: 'tableTree.label',  default: 'Three')}</a></li>
+                    <li><a href="${createLink(controller: 'tableChild')}"    target="_blank"> ${message(code: 'tableChild.label', default: 'One')}</a></li>
+                    <li><a href="${createLink(controller: 'tableChildTwo')}" target="_blank"> ${message(code: 'tableChild.label', default: 'One')}</a></li>
+                </ul>
+                <!--
                 <ul>
                     <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
                         <li class="controller">
@@ -69,6 +68,7 @@
                         </li>
                     </g:each>
                 </ul>
+                -->
             </div>
         </section>
     </div>
